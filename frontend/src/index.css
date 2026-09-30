@@ -1,0 +1,63 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 33% 97%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 114 22% 32%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 114 22% 32%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cream-100 text-foreground antialiased;
+  }
+}
+
+.glass-morphism {
+  @apply backdrop-blur-md bg-white/30 border border-white/40 shadow-lg;
+}
+
+.animate-fade-in {
+  @apply transition-opacity duration-300 ease-in-out;
+}
+
+.dropzone {
+  @apply relative border-2 border-dashed rounded-lg p-12 transition-all duration-300 ease-in-out;
+}
+
+.dropzone-active {
+  @apply border-sage-600 bg-sage-50;
+}
+
+.result-card {
+  @apply glass-morphism rounded-xl p-6 transition-all duration-300 hover:shadow-xl;
+}
+
+.shimmer {
+  @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent;
+}
